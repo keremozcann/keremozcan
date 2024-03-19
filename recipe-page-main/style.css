@@ -1,0 +1,148 @@
+:root {
+  --m-1: 0 2rem 1rem 2rem;
+  --media-100vw: 100vw;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.m-1 {
+  margin: 0 2rem 1rem 2rem;
+}
+body {
+  background-color: rgb(255, 247, 252);
+}
+#main {
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 85vh;
+  margin: 6rem auto;
+}
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 75vh;
+  margin: 2rem 0;
+  border-radius: 1rem;
+}
+.main-title {
+  color: #33302f;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.recipe p {
+  font-family: outfit, sans-serif;
+  color: #595853;
+}
+.preparation {
+  font-family: outfit, sans-serif;
+  background-color: rgb(255, 247, 252);
+  padding: 1.2rem;
+  border-radius: 10px;
+}
+.preparation h2 {
+  color: #822e50;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.preparation ul {
+  padding: 0 1rem;
+  line-height: 2rem;
+}
+.preparation ul li {
+  color: #645b59;
+}
+.preparation ul li::marker {
+  color: purple;
+}
+.ingredients,
+.instructions,
+.nutrition {
+  font-family: outfit, sans-serif;
+  margin-top: 1.6rem;
+}
+.ingredients-title,
+.instructions-title,
+.nutrition-title {
+  font-family: "Times New Roman", Times, serif !important;
+  color: #844933;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.ingredients ul {
+  line-height: 2rem;
+}
+.ingredients ul li,
+.instructions ol li {
+  color: #645b59;
+}
+.instructions ol {
+  line-height: 1.5rem;
+}
+.ingredients ul li::marker,
+.instructions ol li::marker,
+.nutrition-table span {
+  font-weight: bold;
+  color: #844933;
+}
+.nutrition p {
+  color: #645b59;
+  margin-bottom: 1rem;
+}
+.nutrition-table {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-bottom: 3rem;
+}
+.nutrition-table h3 {
+  color: #645b59;
+  font-weight: 500;
+}
+.line {
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  grid-column: 1 / -1;
+  height: 1px;
+  border-bottom: 1px solid #645b59;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .w100 {
+    width: var(--media-100vw);
+  }
+  #main {
+    background-color: #fff;
+    border-radius: 1rem;
+    width: 100vw;
+    margin: 0;
+  }
+  .image {
+    display: block;
+    border: none;
+    width: 100vw;
+  }
+  .image img {
+    display: block;
+    width: 100vw;
+    border-radius: 0;
+    margin-top: 0;
+  }
+  .preparation,
+  .ingredients,
+  .instructions,
+  .nutrition {
+    width: 80vw !important;
+  }
+  hr {
+    width: 80vw;
+  }
+}
